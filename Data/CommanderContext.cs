@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebApplication.Models;
+
+namespace WebApplication.Data
+{
+    public class CommanderContext : DbContext
+    {
+        public CommanderContext(DbContextOptions<CommanderContext> opt) : base(opt)
+        {
+
+        }
+
+        public DbSet <Command> Commands{ get; set; }
+    }
+}
